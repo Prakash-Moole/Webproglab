@@ -1,0 +1,120 @@
+.colorchange{
+	animation:colorchange 2s infinite;
+	width:150px;
+	height:150px;
+}
+@keyframes colorchange{
+	0%{
+		background-color:black;
+	}
+	30%{
+		background-color:pink;
+	}
+	60%{
+		background-color:blue;
+	}
+	100%{
+		background-color:green;
+	}
+}
+
+.ball{
+	height:200px;
+	width:200px;
+	border-color:black;
+	border-style:solid;
+}
+.bounce{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: relative;
+	animation: bounce 2s infinite linear, colorchange 2s infinite;
+}
+
+@keyframes bounce {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	25% {
+		top: 0;
+		left: 75%;
+	}
+	50% {
+		top: 75%;
+		left: 75%;
+	}
+	75% {
+		top: 75%;
+		left: 0;
+	}
+	100% {
+		top: 0;
+		left: 0;
+	}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.square {
+	margin-left:40px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    animation: move 4s linear infinite, rotate 4s linear infinite, colorChange 4s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-300px);
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    100% {
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: black;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: green;
+    }
+    75% {
+        background-color: blue;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
