@@ -76,18 +76,25 @@ body {
     height: 100px;
     background-color: black;
     position: absolute;
-    animation: move 4s linear infinite, rotate 4s linear infinite, colorChange 4s infinite;
+    animation: move 0.9s linear infinite, rotate 4s linear infinite, colorChange 4s infinite;
 }
+.circle{
+	margin-left:40px;
+    animation: move 4s linear infinite;
+} 
 
 @keyframes move {
     0% {
-        transform: translateX(-300px);
+		left:0;
+        transform: translateX(-500px);
     }
     50% {
-        transform: translateX(300px);
+		left:100;
+        transform: translateX(500px);
     }
     100% {
-        transform: translateX(-300px);
+		left:200;
+        transform: translateX(-500px);
     }
 }
 
@@ -116,5 +123,18 @@ body {
     100% {
         background-color: black;
     }
+}
+.triangle{
+	
+	animation:rotate1 2s infinite;
+	
+}
+
+@keyframes rotate1{
+	0%{
+		transform :rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
 }
 
